@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const locationZ = document.getElementById('killer-location-z').value.trim();
         const locationName = document.getElementById('killer-location-name').value.trim();
 
-        if (!killerName || !passportId || !locationX || !locationY || !locationZ || !locationName) {
-            document.getElementById('response-output').innerHTML = `
-                <div class="alert alert-warning" role="alert">
-                    Пожалуйста, заполните все поля.
-                </div>
-            `;
-            return;
-        }
+        // if (!killerName || !passportId || !locationX || !locationY || !locationZ || !locationName) {
+        //     document.getElementById('response-output').innerHTML = `
+        //         <div class="alert alert-warning" role="alert">
+        //             Пожалуйста, заполните все поля.
+        //         </div>
+        //     `;
+        //     return;
+        // }
 
         const requestBody = {
             name: killerName,

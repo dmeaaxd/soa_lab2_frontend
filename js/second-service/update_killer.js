@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const locationZ = document.getElementById('killer-update-location-z').value.trim();
         const locationName = document.getElementById('killer-update-location-name').value.trim();
 
-        if (!killerId || !killerName || !passportId || !locationX || !locationY || !locationZ || !locationName) {
-            document.getElementById('response-output').innerHTML = `
-                <div class="alert alert-warning" role="alert">
-                    Пожалуйста, заполните все поля.
-                </div>
-            `;
-            return;
-        }
+        // if (!killerId || !killerName || !passportId || !locationX || !locationY || !locationZ || !locationName) {
+        //     document.getElementById('response-output').innerHTML = `
+        //         <div class="alert alert-warning" role="alert">
+        //             Пожалуйста, заполните все поля.
+        //         </div>
+        //     `;
+        //     return;
+        // }
 
         const requestBody = {
             id: killerId,

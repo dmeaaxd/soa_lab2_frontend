@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const killerId = document.getElementById('killer-delete-by-id-killer-id').value.trim();
 
-        if (!killerId) {
-            document.getElementById('response-output').innerHTML = `
-                <div class="alert alert-warning" role="alert">
-                    Пожалуйста, заполните ID.
-                </div>
-            `;
-            return;
-        }
+        // if (!killerId) {
+        //     document.getElementById('response-output').innerHTML = `
+        //         <div class="alert alert-warning" role="alert">
+        //             Пожалуйста, заполните ID.
+        //         </div>
+        //     `;
+        //     return;
+        // }
 
 
         const url = `http://80.242.57.251:8081/killer/${killerId}`;

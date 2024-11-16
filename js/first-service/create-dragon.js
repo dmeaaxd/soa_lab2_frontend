@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const character = document.getElementById('dragon-create-character').value;
         const killerId = document.getElementById('dragon-create-killer-id').value.trim();
 
-        if (!dragonName || !x || !y || !age || !color || !type || !character || !killerId) {
-            document.getElementById('response-output').innerHTML = `
-                <div class="alert alert-warning" role="alert">
-                    Пожалуйста, заполните все поля.
-                </div>
-            `;
-            return;
-        }
+        // if (!dragonName || !x || !y || !age || !color || !type || !character || !killerId) {
+        //     document.getElementById('response-output').innerHTML = `
+        //         <div class="alert alert-warning" role="alert">
+        //             Пожалуйста, заполните все поля.
+        //         </div>
+        //     `;
+        //     return;
+        // }
 
         const requestBody = {
             name: dragonName,

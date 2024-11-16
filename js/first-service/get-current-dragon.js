@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const dragonId = document.getElementById('get-by-id-id').value.trim();
 
-        if (!dragonId) {
-            document.getElementById('response-output').innerHTML = `
-                <div class="alert alert-warning" role="alert">
-                    Пожалуйста, заполните ID.
-                </div>
-            `;
-            return;
-        }
+        // if (!dragonId) {
+        //     document.getElementById('response-output').innerHTML = `
+        //         <div class="alert alert-warning" role="alert">
+        //             Пожалуйста, заполните ID.
+        //         </div>
+        //     `;
+        //     return;
+        // }
 
 
         const url = `http://51.250.20.1:8085/soa_lab2_first_service/dragons/${dragonId}`;

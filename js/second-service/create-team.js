@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const startCaveId = document.getElementById('start-create-cave-id').value.trim();
         const killersInput = document.getElementById('killers').value.trim();
 
-        if (!teamId || !teamName || !teamSize || !startCaveId || !killersInput) {
-            document.getElementById('response-output').innerHTML = `
-                <div class="alert alert-warning" role="alert">
-                    Пожалуйста, заполните все поля.
-                </div>
-            `;
-            return;
-        }
+        // if (!teamId || !teamName || !teamSize || !startCaveId || !killersInput) {
+        //     document.getElementById('response-output').innerHTML = `
+        //         <div class="alert alert-warning" role="alert">
+        //             Пожалуйста, заполните все поля.
+        //         </div>
+        //     `;
+        //     return;
+        // }
 
         const killers = killersInput.split(',').map(id => parseInt(id.trim())).filter(Number.isInteger);
 

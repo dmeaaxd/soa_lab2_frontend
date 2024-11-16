@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const character = document.getElementById('dragon-update-character').value;
         const killerId = document.getElementById('dragon-update-killer-id').value.trim();
 
-        if (!id || !dragonName || !x || !y || !age || !color || !type || !character || !killerId) {
-            document.getElementById('response-output').innerHTML = `
-                <div class="alert alert-warning" role="alert">
-                    Пожалуйста, заполните все поля.
-                </div>
-            `;
-            return;
-        }
+        // if (!id || !dragonName || !x || !y || !age || !color || !type || !character || !killerId) {
+        //     document.getElementById('response-output').innerHTML = `
+        //         <div class="alert alert-warning" role="alert">
+        //             Пожалуйста, заполните все поля.
+        //         </div>
+        //     `;
+        //     return;
+        // }
 
         const requestBody = {
             name: dragonName,

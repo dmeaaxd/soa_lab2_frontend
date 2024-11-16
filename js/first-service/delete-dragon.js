@@ -1,32 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById('move-team-button').addEventListener('click', async function () {
+    document.getElementById('delete-dragon-button').addEventListener('click', async function () {
 
-        const teamId = document.getElementById('team-move-id').value.trim();
-        const caveId = document.getElementById('move-cave-id').value.trim();
+        const dragonId = document.getElementById('delete-id').value.trim();
 
-        // if (!teamId || !caveId) {
+        // if (!dragonId) {
         //     document.getElementById('response-output').innerHTML = `
         //         <div class="alert alert-warning" role="alert">
-        //             Пожалуйста, заполните все поля.
+        //             Пожалуйста, заполните ID.
         //         </div>
         //     `;
         //     return;
         // }
 
 
-        const url = `http://80.242.57.251:8081/killer/team/${teamId}/move-to-cave/${caveId}`;
-
+        const url = `http://51.250.20.1:8085/soa_lab2_first_service/dragons/${dragonId}`;
 
         try {
-            console.log(`Отправляется запрос на URL: ${url}`);
-
-            await axios.put(url);
+            const response = await axios.delete(url);
+            const formattedResponse = JSON.stringify(response.data, null, 2);
 
             document.getElementById('response-output').innerHTML = `
-                <div class="alert alert-success" role="alert">Команда успешно перемещена</div>
+                <div class="alert alert-success" role="alert">
+                    Дракон успешно удален
+                </div>
             `;
         } catch (error) {
-            let errorMessage = "Ошибка при переносе команды.";
+            let errorMessage = "Ошибка при получении дракона.";
             if (error.response && error.response.data && error.response.data.message) {
                 errorMessage = error.response.data.message;
             } else if (error.message) {
