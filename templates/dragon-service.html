@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragons Service</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/second-service.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Dragons Service</h1>
+    <div class="row">
+        <!-- Левая колонка -->
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2 class="text-center">Создание дракона</h2>
+                <form id="dragon-create-form">
+                    <div class="mb-3">
+                        <label for="dragon-create-name" class="form-label">Имя дракона</label>
+                        <input type="text" class="form-control" id="dragon-create-name"
+                               placeholder="Введите имя дракона"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="create-x" class="form-label">X</label>
+                        <input type="number" class="form-control" id="create-x"
+                               placeholder="Введите X" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="create-y" class="form-label">Y</label>
+                        <input type="number" class="form-control" id="create-y"
+                               placeholder="Введите Y" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dragon-create-age" class="form-label">Возраст</label>
+                        <input type="number" class="form-control" id="dragon-create-age"
+                               placeholder="Введите возраст дракона" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dragon-create-color" class="form-label">Цвет</label>
+                        <select class="form-control" id="dragon-create-color" required>
+                            <option value="BLACK">Черный</option>
+                            <option value="ORANGE">Оранжевый</option>
+                            <option value="WHITE">Белый</option>
+                            <option value="BROWN">Коричневый</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="dragon-create-type" class="form-label">Тип</label>
+                        <select class="form-control" id="dragon-create-type" required>
+                            <option value="WATER">Вода</option>
+                            <option value="UNDERGROUND">Подземный</option>
+                            <option value="AIR">Воздушный</option>
+                            <option value="FIRE">Огненный</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="dragon-create-character" class="form-label">Характер</label>
+                        <select class="form-control" id="dragon-create-character" required>
+                            <option value="CUNNING">Хитрый</option>
+                            <option value="WISE">Мудрый</option>
+                            <option value="CHAOTIC">Хаотичный</option>
+                            <option value="CHAOTIC_EVIL">Хаотично-злой</option>
+                            <option value="FICKLE">Непостоянный</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="dragon-create-killer-id" class="form-label">ID убийцы</label>
+                        <input type="number" class="form-control" id="dragon-create-killer-id"
+                               placeholder="Введите ID убийцы" required>
+                    </div>
+
+
+                    <button type="button" class="btn btn-primary w-100" id="create-dragon-button">Создать дракона
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Правая колонка -->
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2 class="text-center">Обновление дракона</h2>
+                <form id="dragon-update-form">
+
+                    <div class="mb-3">
+                        <label for="update-id" class="form-label">ID</label>
+                        <input type="number" class="form-control" id="update-id"
+                               placeholder="Введите ID" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dragon-update-name" class="form-label">Имя дракона</label>
+                        <input type="text" class="form-control" id="dragon-update-name"
+                               placeholder="Введите имя дракона"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="update-x" class="form-label">X</label>
+                        <input type="number" class="form-control" id="update-x"
+                               placeholder="Введите X" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="update-y" class="form-label">Y</label>
+                        <input type="number" class="form-control" id="update-y"
+                               placeholder="Введите Y" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dragon-update-age" class="form-label">Возраст</label>
+                        <input type="number" class="form-control" id="dragon-update-age"
+                               placeholder="Введите возраст дракона" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dragon-update-color" class="form-label">Цвет</label>
+                        <select class="form-control" id="dragon-update-color" required>
+                            <option value="BLACK">Черный</option>
+                            <option value="ORANGE">Оранжевый</option>
+                            <option value="WHITE">Белый</option>
+                            <option value="BROWN">Коричневый</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="dragon-update-type" class="form-label">Тип</label>
+                        <select class="form-control" id="dragon-update-type" required>
+                            <option value="WATER">Вода</option>
+                            <option value="UNDERGROUND">Подземный</option>
+                            <option value="AIR">Воздушный</option>
+                            <option value="FIRE">Огненный</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="dragon-update-character" class="form-label">Характер</label>
+                        <select class="form-control" id="dragon-update-character" required>
+                            <option value="CUNNING">Хитрый</option>
+                            <option value="WISE">Мудрый</option>
+                            <option value="CHAOTIC">Хаотичный</option>
+                            <option value="CHAOTIC_EVIL">Хаотично-злой</option>
+                            <option value="FICKLE">Непостоянный</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="dragon-update-killer-id" class="form-label">ID убийцы</label>
+                        <input type="number" class="form-control" id="dragon-update-killer-id"
+                               placeholder="Введите ID убийцы" required>
+                    </div>
+
+
+                    <button type="button" class="btn btn-primary w-100" id="update-dragon-button">Обновить дракона
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2 class="text-center">Получить дракона</h2>
+                <form id="dragon-get-by-id-form">
+
+                    <div class="mb-3">
+                        <label for="get-by-id-id" class="form-label">ID</label>
+                        <input type="number" class="form-control" id="get-by-id-id"
+                               placeholder="Введите ID" required>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="get-by-id-dragon-button">Получить дракона
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2 class="text-center">Удалить дракона</h2>
+                <form id="dragon-delete-form">
+
+                    <div class="mb-3">
+                        <label for="delete-id" class="form-label">ID</label>
+                        <input type="number" class="form-control" id="delete-id"
+                               placeholder="Введите ID" required>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="delete-dragon-button">Удалить дракона
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-container">
+                    <h2 class="text-center">Получить всех драконов</h2>
+                    <form id="dragon-get-form">
+
+                        <div class="mb-3">
+                            <label for="get-sort" class="form-label">SORT</label>
+                            <input type="text" class="form-control" id="get-sort"
+                                   placeholder="Введите SORT" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="get-filter" class="form-label">FILTER</label>
+                            <input type="text" class="form-control" id="get-filter"
+                                   placeholder="Введите FILTER" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="get-page" class="form-label">PAGE</label>
+                            <input type="text" class="form-control" id="get-page"
+                                   placeholder="Введите PAGE" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="get-size" class="form-label">SIZE</label>
+                            <input type="text" class="form-control" id="get-size"
+                                   placeholder="Введите SIZE" required>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" id="get-dragon-button">Получить
+                            драконов
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-container">
+                    <h2 class="text-center">Получить дракона по имени</h2>
+                    <form id="dragon-get-by-name-form">
+
+                        <div class="mb-3">
+                            <label for="get-by-name-dragon" class="form-label">Имя</label>
+                            <input type="text" class="form-control" id="get-by-name-dragon"
+                                   placeholder="Введите имя" required>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" id="get-by-name-dragon-button">Получить
+                            дракона
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-container">
+                    <h2 class="text-center">Найти драконов с убийцей меньше указанного</h2>
+                    <form id="dragon-get-by-passid-form">
+
+                        <div class="mb-3">
+                            <label for="get-by-passid-dragon" class="form-label">PASSPORT ID</label>
+                            <input type="text" class="form-control" id="get-by-passid-dragon"
+                                   placeholder="Введите Passport ID" required>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" id="get-by-passid-dragon-button">Получить
+                            драконов
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-container">
+                    <h2 class="text-center">Найти драконов по характеру</h2>
+                    <form id="dragon-get-by-character-form">
+
+                        <div class="mb-3">
+                            <label for="dragon-get-by-character-character" class="form-label">Характер</label>
+                            <select class="form-control" id="dragon-get-by-character-character" required>
+                                <option value="CUNNING">Хитрый</option>
+                                <option value="WISE">Мудрый</option>
+                                <option value="CHAOTIC">Хаотичный</option>
+                                <option value="CHAOTIC_EVIL">Хаотично-злой</option>
+                                <option value="FICKLE">Непостоянный</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" id="get-by-character-dragon-button">Получить
+                            драконов
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="response-output" class="mt-4">
+            <p class="text-center text-muted">Здесь будет отображаться ответ сервера</p>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Axios для HTTP запросов -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src="../js/first-service/create-dragon.js"></script>
+<script src="../js/first-service/get-all-dragons.js"></script>
+
+
+</body>
+</html>

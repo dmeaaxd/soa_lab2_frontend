@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Killers</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/second-service.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Killers Service</h1>
+    <div class="row">
+        <!-- Левая колонка -->
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2 class="text-center">Создание команды</h2>
+                <form id="team-create-form">
+                    <div class="mb-3">
+                        <label for="team-create-id" class="form-label">ID команды</label>
+                        <input type="number" class="form-control" id="team-create-id" placeholder="Введите ID команды"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="team-create-name" class="form-label">Имя команды</label>
+                        <input type="text" class="form-control" id="team-create-name" placeholder="Введите имя команды"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="team-create-size" class="form-label">Размер команды</label>
+                        <input type="number" class="form-control" id="team-create-size"
+                               placeholder="Введите размер команды" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="start-create-cave-id" class="form-label">ID начальной пещеры</label>
+                        <input type="number" class="form-control" id="start-create-cave-id"
+                               placeholder="Введите ID пещеры" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killers" class="form-label">ID убийц (через запятую)</label>
+                        <input type="text" class="form-control" id="killers"
+                               placeholder="Введите ID убийц, разделяя запятыми" required>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="create-team-button">Создать команду</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Правая колонка -->
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2 class="text-center">Перемещение команды</h2>
+                <form id="team-move-form">
+                    <div class="mb-3">
+                        <label for="team-move-id" class="form-label">ID команды</label>
+                        <input type="number" class="form-control" id="team-move-id" placeholder="Введите ID команды"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="move-cave-id" class="form-label">ID начальной пещеры</label>
+                        <input type="number" class="form-control" id="move-cave-id" placeholder="Введите ID пещеры"
+                               required>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="move-team-button">Переместить команду
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2 class="text-center">Создание убийцы</h2>
+                <form id="killer-create-form">
+
+                    <div class="mb-3">
+                        <label for="killer-create-name" class="form-label">Имя убийцы</label>
+                        <input type="text" class="form-control" id="killer-create-name" placeholder="Введите имя убийцы"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killer-passport-id" class="form-label">Passport ID</label>
+                        <input type="text" class="form-control" id="killer-passport-id"
+                               placeholder="Введите passport ID" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killer-location-x" class="form-label">X</label>
+                        <input type="number" class="form-control" id="killer-location-x"
+                               placeholder="Введите X" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killer-location-y" class="form-label">Y</label>
+                        <input type="number" class="form-control" id="killer-location-y"
+                               placeholder="Введите Y" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killer-location-z" class="form-label">Z</label>
+                        <input type="number" class="form-control" id="killer-location-z"
+                               placeholder="Введите Z" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killer-location-name" class="form-label">Имя локации</label>
+                        <input type="text" class="form-control" id="killer-location-name"
+                               placeholder="Введите имя локации" required>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="create-killer-button">Создать убийцу
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2 class="text-center">Обновление убийцы</h2>
+                <form id="killer-update-form">
+                    <div class="mb-3">
+                        <label for="killer-update-id" class="form-label">ID</label>
+                        <input type="number" class="form-control" id="killer-update-id"
+                               placeholder="Введите ID" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killer-update-name" class="form-label">Имя убийцы</label>
+                        <input type="text" class="form-control" id="killer-update-name" placeholder="Введите имя убийцы"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killer-update-passport-id" class="form-label">Passport ID</label>
+                        <input type="text" class="form-control" id="killer-update-passport-id"
+                               placeholder="Введите passport ID" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killer-update-location-x" class="form-label">X</label>
+                        <input type="number" class="form-control" id="killer-update-location-x"
+                               placeholder="Введите X" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killer-update-location-y" class="form-label">Y</label>
+                        <input type="number" class="form-control" id="killer-update-location-y"
+                               placeholder="Введите Y" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killer-update-location-z" class="form-label">Z</label>
+                        <input type="number" class="form-control" id="killer-update-location-z"
+                               placeholder="Введите Z" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="killer-update-location-name" class="form-label">Имя локации</label>
+                        <input type="text" class="form-control" id="killer-update-location-name"
+                               placeholder="Введите имя локации" required>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="update-killer-button">Обновить убийцу
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2 class="text-center">Получение убийцы</h2>
+                <form id="killer-get-by-id-killer-form">
+                    <div class="mb-3">
+                        <label for="killer-get-by-id-killer-id" class="form-label">ID</label>
+                        <input type="number" class="form-control" id="killer-get-by-id-killer-id"
+                               placeholder="Введите ID" required>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="get-by-id-killer-button">Получить убийцу
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2 class="text-center">Удаление убийцы</h2>
+                <form id="killer-delete-by-id-killer-form">
+                    <div class="mb-3">
+                        <label for="killer-delete-by-id-killer-id" class="form-label">ID</label>
+                        <input type="number" class="form-control" id="killer-delete-by-id-killer-id"
+                               placeholder="Введите ID" required>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="delete-by-id-killer-button">Удалить убийцу
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-container">
+                <h2 class="text-center">Получение всех убийц</h2>
+                <form id="killer-get-killer-form">
+                    <button type="button" class="btn btn-primary w-100" id="killer-get-button">Получить всех убийц
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="response-output" class="mt-4">
+        <p class="text-center text-muted">Здесь будет отображаться ответ сервера</p>
+    </div>
+</div>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Axios для HTTP запросов -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../js/second-service/create-team.js"></script>
+<script src="../js/second-service/move-team.js"></script>
+<script src="../js/second-service/create-killer.js"></script>
+<script src="../js/second-service/update_killer.js"></script>
+<script src="../js/second-service/get_current_killer.js"></script>
+<script src="../js/second-service/delete-killer.js"></script>
+<script src="../js/second-service/get_all_killers.js"></script>
+
+
+
+</body>
+</html>
