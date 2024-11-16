@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById('get-by-id-killer-button').addEventListener('click', async function () {
+    document.getElementById('get-by-id-dragon-button').addEventListener('click', async function () {
 
-        const killerId = document.getElementById('killer-get-by-id-killer-id').value.trim();
+        const dragonId = document.getElementById('get-by-id-id').value.trim();
 
-        if (!killerId) {
+        if (!dragonId) {
             document.getElementById('response-output').innerHTML = `
                 <div class="alert alert-warning" role="alert">
                     Пожалуйста, заполните ID.
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        const url = `http://80.242.57.251:8081/killer/${killerId}`;
+        const url = `http://51.250.20.1:8085/soa_lab2_first_service/dragons/${dragonId}`;
 
         try {
             const response = await axios.get(url);
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             `;
         } catch (error) {
-            let errorMessage = "Ошибка при получении убийцы.";
+            let errorMessage = "Ошибка при получении дракона.";
             if (error.response && error.response.data && error.response.data.message) {
                 errorMessage = error.response.data.message;
             } else if (error.message) {
