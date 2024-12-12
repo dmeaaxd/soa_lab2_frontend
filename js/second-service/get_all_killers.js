@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('killer-get-button').addEventListener('click', async function () {
 
 
-        const url = `http://80.242.57.251:8081/killer`;
+        const url = `https://85.192.48.69:8081/killer`;
 
         try {
             const response = await axios.get(url);

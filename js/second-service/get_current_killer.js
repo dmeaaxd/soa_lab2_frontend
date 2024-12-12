@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // }
 
 
-        const url = `http://80.242.57.251:8081/killer/${killerId}`;
+        const url = `https://85.192.48.69:8081/killer/${killerId}`;
 
         try {
             const response = await axios.get(url);

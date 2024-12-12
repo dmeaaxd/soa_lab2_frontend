@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const character = document.getElementById('dragon-get-by-character-character').value;
 
-        const url = `http://51.250.20.1:8085/soa_lab2_first_service/dragons/filter-by-character?character=${character}`;
+        const url = `https://85.192.48.69:8443/soa_lab2_first_service-0.1-SNAPSHOT/dragons/filter-by-character?character=${character}`;
 
         try {
             const response = await axios.get(url);

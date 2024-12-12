@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             killer: parseInt(killerId)
         };
 
-        const url = `http://51.250.20.1:8085/soa_lab2_first_service/dragons/${id}`;
+        const url = `https://85.192.48.69:8443/soa_lab2_first_service-0.1-SNAPSHOT/dragons/${id}`;
 
         try {
             await axios.put(url, requestBody);

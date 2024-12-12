@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const url = `http://80.242.57.251:8081/killer/teams/create/${teamId}/${teamName}/${teamSize}/${startCaveId}`;
+        const url = `https://85.192.48.69:8081/killer/teams/create/${teamId}/${teamName}/${teamSize}/${startCaveId}`;
 
         const requestBody = {
             killers: killers // Массив ID убийц

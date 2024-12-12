@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("get-dragon-button").addEventListener("click", async function () {
-        const baseUrl = "http://51.250.20.1:8085/soa_lab2_first_service/dragons";
+        const baseUrl = "https://85.192.48.69:8443/soa_lab2_first_service-0.1-SNAPSHOT/dragons";
 
         const sort = document.getElementById("get-sort").value;
         const filter = document.getElementById("get-filter").value;

